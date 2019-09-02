@@ -34,6 +34,7 @@ namespace PetShopUI
                                   "5. Update a pet\n" +
                                   "6. Sort pets by price\n" +
                                   "7. See the 5 cheapest pets\n" +
+                                  "8. Sell a pet\n" +
                                   "Esc. Exit program\n" +
                                   "To select, please press the corresponding key");
                 key = Console.ReadKey().Key;
@@ -223,7 +224,13 @@ namespace PetShopUI
             Console.WriteLine("Please choose pet to sell");
             ListPets(pets);
             Pet pet = DisplayPetInfo(pets);
-            Console.WriteLine("Pet sold");
+            if (pet == null)
+            {
+                Console.WriteLine("No pet selected");
+                return;
+            }
+
+            Console.WriteLine("Pet sold on date " + DateTime.Now.ToLongDateString());
 
         }
     }

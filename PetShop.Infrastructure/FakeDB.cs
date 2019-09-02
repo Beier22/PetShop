@@ -30,7 +30,7 @@ namespace PetShop.Infrastructure
                 Id = id++,
                 Type = "Parrot",
                 Name = "Joe",
-                Color = "Red, blue and yellow",
+                Color = "Red, blue & yellow",
                 Birthday = new DateTime(2013, 8, 17),
                 PreviousOwner = "Jack, the Savage",
                 Price = 12000
@@ -47,9 +47,33 @@ namespace PetShop.Infrastructure
                 Price = 20000
             };
 
+            Pet p4 = new Pet
+            {
+                Id = id++,
+                Type = "Cat",
+                Name = "Whiskers",
+                Color = "White & black",
+                Birthday = new DateTime(2012, 10, 12),
+                PreviousOwner = "Joey",
+                Price = 8000
+            };
+
+            Pet p5 = new Pet
+            {
+                Id = id++,
+                Type = "Turtle",
+                Name = "Leonardo",
+                Color = "Green",
+                Birthday = new DateTime(2008, 12, 01),
+                PreviousOwner = "Rachel",
+                Price = 25000
+            };
+
             pets.Add(p1);
             pets.Add(p2);
             pets.Add(p3);
+            pets.Add(p4);
+            pets.Add(p5);
         }
 
         public static List<Pet> GetPets()
