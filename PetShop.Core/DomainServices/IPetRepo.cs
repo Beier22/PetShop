@@ -14,14 +14,14 @@ namespace PetShop.Core.DomainServices
         Pet AddPet(Pet pet);
 
         //Read
-        IEnumerable<Pet> GetAllPets();
+        List<Pet> GetAllPets();
         Pet ReadById(int id);
 
         //Update
         Pet UpdatePet(Pet pet);
 
         //Delete
-        bool DeletePet(int id);
+        Pet DeletePet(int id);
 
         #endregion
 

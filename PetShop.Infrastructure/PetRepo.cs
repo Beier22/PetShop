@@ -7,8 +7,9 @@ using PetShop.Core.Entity;
 
 namespace PetShop.Infrastructure
 {
-    public class PetRepo: IPetRepo
+    public class PetRepo//: IPetRepo
     {
+        /*
         private List<Pet> _pets = FakeDB.GetPets();
         public Pet AddPet(Pet pet)
         {
@@ -17,8 +18,9 @@ namespace PetShop.Infrastructure
             return pet;
         }
 
-        public IEnumerable<Pet> GetAllPets()
+        public List<Pet> GetAllPets()
         {
+            
             return _pets;
         }
 
@@ -52,17 +54,17 @@ namespace PetShop.Infrastructure
 
         }
 
-        public bool DeletePet(int id)
+        public Pet DeletePet(int id)
         {
             Pet pet = ReadById(id);
             if (pet != null)
             {
                 _pets.Remove(pet);
-                return true;
+                return pet;
             }
 
-            return false;
-        }
+            return pet;
+        }*/
 
         
     }

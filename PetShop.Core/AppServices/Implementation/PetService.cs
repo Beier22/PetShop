@@ -49,6 +49,11 @@ namespace PetShop.Core.AppServices.Implementation
             repo.UpdatePet(pet);
         }
 
+        public Pet ReadById(int id)
+        {
+            return repo.ReadById(id);
+        }
+
         public void UpdatePet(Pet pet)
         {
             repo.UpdatePet(pet);
@@ -67,5 +72,7 @@ namespace PetShop.Core.AppServices.Implementation
 
             return 0;
         }
+
+
     }
 }

@@ -15,5 +15,6 @@ namespace PetShop.Core.AppServices
         void DeletePet(Pet pet);
         List<Pet> OrderByPrice();
         void SellPet(Pet pet);
+        Pet ReadById(int id);
     }
 }

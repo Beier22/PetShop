@@ -18,7 +18,7 @@ namespace PetShopUI
         public Printer(IPetService service)
         {
             this.service = service;
-            FakeDB.SamplePets();
+            //FakeDB.SamplePets();
         }
 
         public void StartUI()
@@ -167,7 +167,7 @@ namespace PetShopUI
 
             pet.Price = price;
             Console.WriteLine("Previous owner: ");
-            pet.PreviousOwner = Console.ReadLine();
+            //pet.PreviousOwner = Console.ReadLine();
             return pet;
         }
 

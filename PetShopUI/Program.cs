@@ -12,11 +12,12 @@ namespace PetShopUI
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, and welcome to the pet shop!");
-
+            
             var serviceCollection = new ServiceCollection();
-            serviceCollection.AddScoped<IPetRepo, PetRepo>();
+            //serviceCollection.AddScoped<IPetRepo, PetRepo>();
             serviceCollection.AddScoped<IPetService, PetService>();
             serviceCollection.AddScoped<IPrinter, Printer>();
+            
 
             ////then build provider 
             var serviceProvider = serviceCollection.BuildServiceProvider();

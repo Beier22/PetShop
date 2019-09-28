@@ -1,19 +1,56 @@
 ﻿using PetShop.Core.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using PetShop.Core.DomainServices;
 
-namespace PetShop.Infrastructure
+namespace PetShop.Infrastructure.SQLData
 {
-    public static class FakeDB
+    public static class DbInitializer
     {
-        
-        /*static List<Pet> pets = new List<Pet>();
-        static List<Owner> owners = new List<Owner>();
         private static int id = 1;
-        public static void SamplePets()
+        private static int oid = 1;
+        public static void Seed(PetShopContext context)
         {
+            List<Pet> pets = new List<Pet>();
+            List<Owner> owners = new List<Owner>();
+
+            
+            Owner o1 = new Owner
+            {
+                Id = oid++,
+                Name = "Johnny"
+            };
+
+            Owner o2 = new Owner
+            {
+                Id = oid++,
+                Name = "Suzy"
+            };
+
+            Owner o3 = new Owner
+            {
+                Id = oid++,
+                Name = "James"
+            };
+
+            Owner o4 = new Owner()
+            {
+                Id = oid++,
+                Name = "Jack, the Savage"
+            };
+
+            Owner o5 = new Owner()
+            {
+                Id = oid++,
+                Name = "Bob"
+            };
+
+
+
+            owners.Add(o1);
+            owners.Add(o2);
+            owners.Add(o3);
 
             Pet p1 = new Pet
             {
@@ -22,7 +59,7 @@ namespace PetShop.Infrastructure
                 Name = "Bubz",
                 Color = "Black",
                 Birthday = new DateTime(2016, 4, 20),
-                PreviousOwner = "Bob",
+                PreviousOwner = o1,
                 Price = 15000
             };
 
@@ -33,7 +70,7 @@ namespace PetShop.Infrastructure
                 Name = "Joe",
                 Color = "Red, blue & yellow",
                 Birthday = new DateTime(2013, 8, 17),
-                PreviousOwner = "Jack, the Savage",
+                PreviousOwner = o2,
                 Price = 12000
             };
 
@@ -44,7 +81,7 @@ namespace PetShop.Infrastructure
                 Name = "Fluffy",
                 Color = "White",
                 Birthday = new DateTime(2018, 1, 19),
-                PreviousOwner = "James",
+                PreviousOwner = o3,
                 Price = 20000
             };
 
@@ -55,7 +92,7 @@ namespace PetShop.Infrastructure
                 Name = "Whiskers",
                 Color = "White & black",
                 Birthday = new DateTime(2012, 10, 12),
-                PreviousOwner = "Joey",
+                PreviousOwner = o4,
                 Price = 8000
             };
 
@@ -66,7 +103,7 @@ namespace PetShop.Infrastructure
                 Name = "Leonardo",
                 Color = "Green",
                 Birthday = new DateTime(2008, 12, 01),
-                PreviousOwner = "Rachel",
+                PreviousOwner = o5,
                 Price = 25000
             };
 
@@ -75,46 +112,16 @@ namespace PetShop.Infrastructure
             pets.Add(p3);
             pets.Add(p4);
             pets.Add(p5);
+
+            context.Pets.AddRange(pets);
+            context.Owners.AddRange(owners);
+            context.SaveChanges();
+
+            
         }
-
-        public static void SampleOwners()
-        {
-            Owner o1 = new Owner
-            {
-                Id = id++,
-                Name = "Johnny"
-            };
-
-            Owner o2 = new Owner
-            {
-                Id = id++,
-                Name = "Suzy"
-            };
-
-            Owner o3 = new Owner
-            {
-                Id = id++,
-                Name = "James"
-            };
-
-            owners.Add(o1);
-            owners.Add(o2);
-            owners.Add(o3);
-        }
-
-        public static List<Pet> GetPets()
-        {
-            return pets;
-        }
-
-        public static int GetNextPetID()
+        public static int GetNextPetId()
         {
             return id++;
         }
-
-        public static List<Owner> GetOwners()
-        {
-            return owners;
-        }*/
     }
 }
