@@ -18,31 +18,31 @@ namespace PetShop.Infrastructure.SQLData
             
             Owner o1 = new Owner
             {
-                Id = oid++,
+                //Id = oid++,
                 Name = "Johnny"
             };
 
             Owner o2 = new Owner
             {
-                Id = oid++,
+                //Id = oid++,
                 Name = "Suzy"
             };
 
             Owner o3 = new Owner
             {
-                Id = oid++,
+                //Id = oid++,
                 Name = "James"
             };
 
             Owner o4 = new Owner()
             {
-                Id = oid++,
+                //Id = oid++,
                 Name = "Jack, the Savage"
             };
 
             Owner o5 = new Owner()
             {
-                Id = oid++,
+                //Id = oid++,
                 Name = "Bob"
             };
 
@@ -54,56 +54,56 @@ namespace PetShop.Infrastructure.SQLData
 
             Pet p1 = new Pet
             {
-                Id = id++,
+                //Id = id++,
                 Type = "Dog",
                 Name = "Bubz",
                 Color = "Black",
                 Birthday = new DateTime(2016, 4, 20),
-                PreviousOwner = o1,
+                PreviousOwnerId = -1,
                 Price = 15000
             };
 
             Pet p2 = new Pet
             {
-                Id = id++,
+                //Id = id++,
                 Type = "Parrot",
                 Name = "Joe",
                 Color = "Red, blue & yellow",
                 Birthday = new DateTime(2013, 8, 17),
-                PreviousOwner = o2,
+                PreviousOwnerId = -1,
                 Price = 12000
             };
 
             Pet p3 = new Pet
             {
-                Id = id++,
+                //Id = id++,
                 Type = "Dog",
                 Name = "Fluffy",
                 Color = "White",
                 Birthday = new DateTime(2018, 1, 19),
-                PreviousOwner = o3,
+                PreviousOwnerId = -1,
                 Price = 20000
             };
 
             Pet p4 = new Pet
             {
-                Id = id++,
+                //Id = id++,
                 Type = "Cat",
                 Name = "Whiskers",
                 Color = "White & black",
                 Birthday = new DateTime(2012, 10, 12),
-                PreviousOwner = o4,
+                PreviousOwnerId = -1,
                 Price = 8000
             };
 
             Pet p5 = new Pet
             {
-                Id = id++,
+                //Id = id++,
                 Type = "Turtle",
                 Name = "Leonardo",
                 Color = "Green",
                 Birthday = new DateTime(2008, 12, 01),
-                PreviousOwner = o5,
+                PreviousOwnerId = -1,
                 Price = 25000
             };
 

@@ -17,7 +17,8 @@ namespace PetShop.Infrastructure.SQLData.Repositories
         }
         public Pet AddPet(Pet pet)
         {
-            pet.Id = DbInitializer.GetNextPetId();
+            //pet.Id = DbInitializer.GetNextPetId();
+            pet.Id = 0;
             _ctx.Add(pet);
             _ctx.SaveChanges();
             return pet;

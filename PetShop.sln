@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Petshop.UI.RestAPI", "Petshop.UI.RestAPI\Petshop.UI.RestAPI.csproj", "{C48D6053-3FF8-4A8C-9783-327BF3D14E75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Infrastructure.SQLData", "PetShop.Infrastructure.SQLData\PetShop.Infrastructure.SQLData.csproj", "{BE3916EC-2175-4D93-9BB5-5798740A32F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShop.Infrastructure.SQLData", "PetShop.Infrastructure.SQLData\PetShop.Infrastructure.SQLData.csproj", "{BE3916EC-2175-4D93-9BB5-5798740A32F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
